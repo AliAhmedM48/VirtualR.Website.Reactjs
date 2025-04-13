@@ -67,6 +67,6 @@ Feel free to open issues or submit pull requests for improvements!
 
 ## ✨ Demo Preview
 
-![Demo Link](https://virtual-r-website-reactjs.vercel.app/)
+[Demo Link](https://virtual-r-website-reactjs.vercel.app/)
 
 > Built with ❤️ using React + Tailwind
