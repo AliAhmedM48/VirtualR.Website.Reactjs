@@ -5,7 +5,7 @@ import { MainTitle } from "./MainTitle";
 function TestimonialSection({ testimonials }) {
   return (
     <>
-      <div id="Testimonials" className="">
+      <section id="Testimonials" className="">
         {/* <MainTitle className="mb-20">What People are saying</MainTitle> */}
         <MainTitle
           defaultText={
@@ -55,11 +55,11 @@ function TestimonialSection({ testimonials }) {
                     </motion.p>
                     <div className="flex flex-col justify-start items-start">
                       <motion.span
-                        className="h-0.25 w-full mb-4 mx-auto block bg-neutral-700 rounded-full"
+                        className="h-0.25 w-full mb-4 ml-auto block bg-neutral-700 rounded-full"
                         initial={{ width: "100%" }}
                         variants={{
                           hover: {
-                            width: "50%",
+                            width: "75%",
                             backgroundColor: "#f97316",
                           },
                         }}
@@ -100,7 +100,7 @@ function TestimonialSection({ testimonials }) {
             );
           })}
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -9,7 +9,7 @@ function FeatureSection({ features }) {
 
   return (
     <>
-      <div
+      <section
         id="Features"
         className="relative border-b border-neutral-800 min-h-[800px]"
       >
@@ -85,7 +85,7 @@ function FeatureSection({ features }) {
             );
           })}
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function WorkflowSection({ checklistItems }) {
   return (
     <>
-      <div id="Workflow">
+      <section id="Workflow">
         <MainTitle
           defaultText={
             <>
@@ -74,7 +74,7 @@ function WorkflowSection({ checklistItems }) {
             })}
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

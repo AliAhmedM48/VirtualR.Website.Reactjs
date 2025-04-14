@@ -8,7 +8,7 @@ import { hover, motion } from "framer-motion";
 function PricingSection({ pricingOptions }) {
   return (
     <>
-      <div id="Pricing" className="w-full">
+      <section id="Pricing" className="w-full">
         <MainTitle defaultText="Pricing" enableHover={false} />
 
         <div className="flex flex-wrap w-full">
@@ -90,7 +90,7 @@ function PricingSection({ pricingOptions }) {
             </motion.div>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 }

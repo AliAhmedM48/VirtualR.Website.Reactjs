@@ -19,6 +19,25 @@ import {
 } from "./constants";
 
 function App() {
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
+
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -58,7 +77,7 @@ function App() {
       )} */}
 
       <>
-        <Navbar />
+        <Navbar activeSection={activeSection} />
         <div className="max-w-7xl pb-10 mx-auto px-6 flex flex-col items-center jucstify-center space-y-20">
           <img
             src={brainSymbol}

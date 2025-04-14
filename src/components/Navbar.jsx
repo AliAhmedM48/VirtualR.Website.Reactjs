@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 import { navItems } from "../constants";
 import { Button } from "./Button";
 
-const Navbar = () => {
+const Navbar = ({ activeSection }) => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
   const toggleNav = () => {
@@ -28,7 +28,11 @@ const Navbar = () => {
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="py-5 px-3 hover:text-orange-500 transition-colors duration-500"
+                    className={
+                      activeSection == item.label
+                        ? "py-5 px-3 text-orange-500"
+                        : "py-5 px-3 hover:text-orange-500 transition-colors duration-500"
+                    }
                   >
                     {item.label}
                   </a>
