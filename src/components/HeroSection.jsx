@@ -5,7 +5,7 @@ import { GradientText } from "./GradientText";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20">
+    <div id="Hero" className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
         VirtualR Build Tools <GradientText> for developers</GradientText>
       </h1>
