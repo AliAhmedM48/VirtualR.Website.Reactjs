@@ -18,9 +18,18 @@ import {
   testimonials,
 } from "./constants";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-LLD82XMYXM";
+ReactGA.initialize(TRACKING_ID);
 function App() {
   const [activeSection, setActiveSection] = useState("");
 
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname + window.location.search,
+    });
+  }, []);
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
     const observer = new IntersectionObserver(
